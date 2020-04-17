@@ -2,9 +2,37 @@
    color: #fff;
 }
 
+.control-label {
+    font-size: 12px;
+    text-align: right;
+}
+
+.txtBox {
+    width: 80px;
+    float: right;
+}
+
+.form-row {
+    height: 60px;
+}
+
+.text-validator{
+    font-size: 16px;
+    position:absolute;
+    right:1px;
+    color:deeppink;
+}
+
+
 .bg-image-1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/Content/images/section-bg-1.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
 
+.fa-pound {
+    font-size: 18px;
+    float: left;
+    margin-right: 5px;
+    padding-top: 10px;
+}

@@ -24,7 +24,7 @@ public partial class _Default : System.Web.UI.Page
     }
 
     [System.Web.Services.WebMethod(true)]
-    public static Object BudgetCalc(
+        public static Object BudgetCalc(
         string tbParentC, string tbPartTimeW, string tbScholarG, string tbIncomeOthers,
         string tbTutionF, string tbAccomadation, string tbFood, string tbTransport, string tbHouseholdB,
         string tbExpOthers)

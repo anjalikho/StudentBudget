@@ -24,7 +24,7 @@ public partial class _Default : System.Web.UI.Page
     }
 
     [System.Web.Services.WebMethod(true)]
-        public static Object BudgetCalc(
+    public static Object BudgetCalc(
         string tbParentC, string tbPartTimeW, string tbScholarG, string tbIncomeOthers,
         string tbTutionF, string tbAccomadation, string tbFood, string tbTransport, string tbHouseholdB,
         string tbExpOthers)
@@ -47,14 +47,28 @@ public partial class _Default : System.Web.UI.Page
             convertDouble(tbExpOthers);
 
         return new {
-                income = totalIncome,
-                expenditure = totalExpenditure,
-                net = (totalIncome - totalExpenditure)
+                income = round2DecPlaces(totalIncome),
+                expenditure = round2DecPlaces(totalExpenditure),
+                net = round2DecPlaces(totalIncome - totalExpenditure)
         };
     }
 
+    protected void btnCalculate_Click(object sender, EventArgs e)
+    {
+        //lblTest.Text = DateTime.Now.ToString("dd MMM yyyy - HH:mm:ss");
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "showModal();", true);
+    }
+
+    private static double round2DecPlaces(double input)
+    {
+        return Math.Ceiling(100 * input) / 100;
+    }
     private static double convertDouble(string inputValue)
     {
-        return Convert.ToDouble(inputValue);
+        if (inputValue != null && inputValue.Trim().Length > 0)
+        {
+            return Convert.ToDouble(inputValue);
+        }
+        return 0;
     }
 }

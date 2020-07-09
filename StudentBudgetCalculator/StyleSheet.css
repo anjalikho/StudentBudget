@@ -2,13 +2,20 @@
    color: #fff;
 }
 
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 15px;
+    line-height: 1.0;
+    font-weight: 200;
+   
+}
+
 .control-label {
     font-size: 12px;
     text-align: right;
 }
 
 .txtBox {
-    width: 80px;
+    width: 100px;
     float: right;
 }
 
@@ -18,8 +25,8 @@
 
 .text-validator{
     font-size: 16px;
-    position:absolute;
-    right:1px;
+    #position:absolute;
+    #right:1px;
     color:deeppink;
 }
 
@@ -31,8 +38,46 @@
 }
 
 .fa-pound {
-    font-size: 18px;
-    float: left;
-    margin-right: 5px;
+    font-size: 14px;
     padding-top: 10px;
+}
+
+/*
+    MODAL
+*/
+
+.rbm_modal:before{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    #content:"";
+
+    width:100%;
+    height:100%;
+    margin:auto;
+    position:absolute
+}
+.rbm_modal > .modal-dialog{
+    width:auto;
+    margin:auto;
+    overflow-y:auto;
+    overflow-x:hidden;
+    position:absolute;
+    background:transparent
+}
+
+.rbm_modal > .modal-dialog > .modal-content{
+    outline:0;
+    width:100%;
+    border:none;
+    position:relative;
+    background-color:transparent;
+}
+
+.rbm_center > .modal-dialog{
+    top:30px;
+    left:30px;
+    right:30px;
+    bottom:30px;
 }
